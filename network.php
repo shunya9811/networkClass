@@ -6,7 +6,9 @@
     <title>network class</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link href="img/favicon.ico" rel="icon">
 </head>
 <body>
     <header>
@@ -55,10 +57,10 @@
                 }
 
                 flock($fp, LOCK_UN);
+                fclose($fp);
             }
         }
 
-        fclose($fp);
 
         $format = '%0'.$counter_lenght.'d';
         $new_counter = sprintf($format, $counter);
@@ -80,11 +82,11 @@
         
         <h2>現在の教室の状況</h2>
         <div class="d-flex align-items-center justify-content-center">
-            <img src="#" width="530" height="400">
+            <img src="#" width="1530" height="1200">
         </div>
         <br>
 
-        <h2>これまでの
+        <h2>これまでの学習の様子</h2>
     </main>
 
     <footer>
